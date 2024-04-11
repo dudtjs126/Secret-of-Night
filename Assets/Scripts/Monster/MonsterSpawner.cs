@@ -48,7 +48,7 @@ public class MonsterSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (maxMonsterNumber < monsterNumber)
+        if (monsterNumber < maxMonsterNumber))
         {
             StartCoroutine(SpawnMonster());
         }
