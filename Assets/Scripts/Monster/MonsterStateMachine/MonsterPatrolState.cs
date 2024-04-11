@@ -12,7 +12,7 @@ public class MonsterPatrolState : MonsterBaseState
         base.Enter();
         stateMachine.MovementSpeedModifier = 0.5f;
         stateMachine.FieldMonsters.monsterAnimation.StartWalkAnimation();
-        Patrol();
+
     }
 
     public override void Exit()
@@ -24,23 +24,24 @@ public class MonsterPatrolState : MonsterBaseState
     public override void Update()
     {
         base.Update();
-        IsInMyPosition();
+        Patrol();
+        //IsInMyPosition();
     }
 
-    private void IsInMyPosition()
-    {
-        Move();
-        Vector3 myOriginalPosition = stateMachine.FieldMonsters.originalPosition;
-        Vector3 currentPosition = stateMachine.FieldMonsters.transform.position;
+    //private void IsInMyPosition()
+    //{
+    //    Move();
+    //    Vector3 myOriginalPosition = stateMachine.FieldMonsters.originalPosition;
+    //    Vector3 currentPosition = stateMachine.FieldMonsters.transform.position;
 
-        float distance = (currentPosition - myOriginalPosition).sqrMagnitude;
+    //    float distance = (currentPosition - myOriginalPosition).sqrMagnitude;
 
-        //원래 포지션으로 가면 -> idle State로 바꿈
-        if (myOriginalPosition.x <= 0.5f)
-        {
-            stateMachine.ChangeState(stateMachine.IdleState);
-        }
-    }
+    //    //원래 포지션으로 가면 -> idle State로 바꿈
+    //    if (myOriginalPosition.x <= 0.5f)
+    //    {
+    //        stateMachine.ChangeState(stateMachine.IdleState);
+    //    }
+    //}
 
     private void Patrol()
     {

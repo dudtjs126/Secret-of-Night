@@ -36,6 +36,8 @@ public class FieldMonsters : MonoBehaviour, IDamageable
         controller = GetComponent<CharacterController>();
         monsterAnimation = GetComponent<MonsterAnimation>();
         attackCollider = GetComponent<BoxCollider>();
+
+        monsterSpawner = gameObject.AddComponent<MonsterSpawner>();
     }
 
     public void Init(MonsterInfo monsterInfo)
@@ -46,7 +48,7 @@ public class FieldMonsters : MonoBehaviour, IDamageable
         HP = myInfo.HP;
 
         itemDataBase = GameManager.Instance.dataManager.itemDataBase;
-        monsterSpawner = GameManager.Instance.monsterManager.monsterSpawner;
+        //monsterSpawner = GameManager.Instance.monsterManager.monsterSpawner;
 
         stateMachine = new MonsterStateMachine(this);
         stateMachine.ChangeState(stateMachine.IdleState);

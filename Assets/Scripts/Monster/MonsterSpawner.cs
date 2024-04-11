@@ -30,8 +30,8 @@ public class MonsterSpawner : MonoBehaviour
     //MonsterSpot[] spotPoint;//가져온 monsterSpot들의 배열
     public List<CircleInfo> MonsterSpot = new List<CircleInfo>();//스팟리스트
 
-    int monsterNumber;
-    int maxMonsterNumber = 70;//[todo]각 몬스터 개체수
+    public int monsterNumber;
+    int maxMonsterNumber = 10;//[todo]각 몬스터 개체수
 
     void Start()
     {
@@ -48,7 +48,10 @@ public class MonsterSpawner : MonoBehaviour
 
     private void Update()
     {
-        StartCoroutine(SpawnMonster());
+        if (maxMonsterNumber < monsterNumber)
+        {
+            StartCoroutine(SpawnMonster());
+        }
     }
 
     //스폰 및 무브 범위 정보 추가

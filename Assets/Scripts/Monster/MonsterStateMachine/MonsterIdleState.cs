@@ -13,6 +13,7 @@ public class MonsterIdleState : MonsterBaseState
         stateMachine.MovementSpeedModifier = 0f;
 
         stateMachine.FieldMonsters.monsterAnimation.StartIdleAnimation();
+        stateMachine.ChangeState(stateMachine.PatrolState);
     }
 
     public override void Exit()
@@ -25,7 +26,6 @@ public class MonsterIdleState : MonsterBaseState
     public override void Update()
     {
         base.Update();
-        stateMachine.ChangeState(stateMachine.PatrolState);
     }
 
     public override void PhysicsUpdate()
