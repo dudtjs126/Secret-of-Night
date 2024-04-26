@@ -13,9 +13,12 @@ public class PickupController : MonoBehaviour
     [SerializeField] private LayerMask _layerMask;
     [SerializeField] private TextMeshProUGUI _pickupText;
 
+    private Shop _shop;
+
     private void Start()
     {
         GameManager.Instance.playerManager.playerData.OnDie += DontPickUp;
+        _shop = FindObjectOfType<Shop>();
     }
 
     private void Update()
@@ -84,9 +87,20 @@ public class PickupController : MonoBehaviour
 
             if (distance <= _range)
             {
-                Inventory.instance.AddItem(_collider.transform.GetComponentInChildren<ItemObject>().item, 1);
-                Destroy(_collider.gameObject);
-                ItemInfoDisappear();
+                if (_collider.transform.GetComponentInChildren<ItemObject>().item.ItemID == 33)
+                {
+                    GameManager.Instance.playerManager.playerData.Gold += _collider.transform.GetComponentInChildren<ItemObject>().item.Money;
+                    Inventory.instance.CashUpdate();
+                    _shop.CashUpdate();
+                    Destroy(_collider.gameObject);
+                }
+                else
+                {
+                    Inventory.instance.AddItem(_collider.transform.GetComponentInChildren<ItemObject>().item, 1);
+                    Destroy(_collider.gameObject);
+                    ItemInfoDisappear();
+                }
+
             }
         }
     }
