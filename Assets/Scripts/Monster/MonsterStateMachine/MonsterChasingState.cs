@@ -11,7 +11,6 @@ public class MonsterChasingState : MonsterBaseState
         stateMachine.MovementSpeedModifier = 1;
 
         stateMachine.FieldMonsters.monsterAnimation.StartRunAnimation();
-
     }
 
     public override void Exit()
@@ -30,6 +29,11 @@ public class MonsterChasingState : MonsterBaseState
         if (!IsInChaseRange())
         {
             stateMachine.ChangeState(stateMachine.PatrolState);
+            return;
+        }
+        else if (IsInAttackRange() && stateMachine.FieldMonsters.myInfo.ShortDistance)
+        {
+            stateMachine.ChangeState(stateMachine.StandoffAttackState);
             return;
         }
         else if (IsInAttackRange())

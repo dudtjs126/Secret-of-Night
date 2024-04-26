@@ -15,6 +15,7 @@ public class MonsterStateMachine : StateMachine
     public MonsterAttackState AttackState { get; }
     public MonsterDyingState DyingState { get; }
     public MonsterPatrolState PatrolState { get; }
+    public MonsterStandoffAttackState StandoffAttackState { get; }
 
     public Vector2 MovementInput { get; set; }
     public float MovementSpeed { get; private set; }
@@ -32,6 +33,7 @@ public class MonsterStateMachine : StateMachine
         AttackState = new MonsterAttackState(this);
         PatrolState = new MonsterPatrolState(this);
         DyingState = new MonsterDyingState(this);
+        StandoffAttackState = new MonsterStandoffAttackState(this);
 
         MovementSpeed = FieldMonsters.myInfo.MoveSpeed;
         rotationDamping = fieldMonster.myInfo.RotationDamping;

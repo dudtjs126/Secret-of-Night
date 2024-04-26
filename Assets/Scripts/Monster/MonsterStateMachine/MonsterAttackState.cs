@@ -13,16 +13,14 @@ public class MonsterAttackState : MonsterBaseState
     {
         base.Enter();
         stateMachine.MovementSpeedModifier = 0;
-
         stateMachine.FieldMonsters.monsterAnimation.StartAttackAnimation();
-
+        Debug.Log("근거리공격");
         stateMachine.FieldMonsters.OnAttack += NomalAttack;
     }
 
     public override void Exit()
     {
         base.Exit();
-
         stateMachine.FieldMonsters.monsterAnimation.StopAttackAnimation();
 
         stateMachine.FieldMonsters.OnAttack -= NomalAttack;
@@ -45,25 +43,18 @@ public class MonsterAttackState : MonsterBaseState
                 return;
             }
         }
+
+        if (DistanceFromPlayer() >= 1.6f && stateMachine.FieldMonsters.myInfo.ShortDistance)
+        {
+            stateMachine.ChangeState(stateMachine.StandoffAttackState);
+        }
     }
 
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
 
-        float progessiveTime = stateMachine.FieldMonsters.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime % 1f;
-        if (progessiveTime < 0.5f)//애니메이션 플레이중
-        {
-            _attack = false;
-            stateMachine.FieldMonsters.attackCollider.enabled = false;
-        }
-
-        if (!_attack && progessiveTime >= 0.5f)//애니메이션 끝났을때
-        {
-            _attack = true;
-            stateMachine.FieldMonsters.attackCollider.enabled = true;
-        }
-
+        ShortAttackCollider();
 
         ForceMove();
 
@@ -85,6 +76,22 @@ public class MonsterAttackState : MonsterBaseState
                 stateMachine.ChangeState(stateMachine.PatrolState);
                 return;
             }
+        }
+    }
+
+    private void ShortAttackCollider()
+    {
+        float progessiveTime = stateMachine.FieldMonsters.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime % 1f;
+        if (progessiveTime < 0.5f)//애니메이션 플레이중
+        {
+            _attack = false;
+            stateMachine.FieldMonsters.attackCollider.enabled = false;
+        }
+
+        if (!_attack && progessiveTime >= 0.5f)//애니메이션 끝났을때
+        {
+            _attack = true;
+            stateMachine.FieldMonsters.attackCollider.enabled = true;
         }
     }
 

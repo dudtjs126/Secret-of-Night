@@ -36,6 +36,10 @@ public class MonsterBaseState : IState, IDamageable
                 stateMachine.ChangeState(stateMachine.ChasingState);
                 return;
             }
+            else if (IsInAttackRange() && stateMachine.FieldMonsters.myInfo.ShortDistance)
+            {
+                stateMachine.ChangeState(stateMachine.StandoffAttackState);
+            }
             else if (IsInAttackRange())
             {
                 stateMachine.ChangeState(stateMachine.AttackState);
@@ -118,6 +122,18 @@ public class MonsterBaseState : IState, IDamageable
     {
         float playerDistanceSqr = (stateMachine.Target.transform.position - stateMachine.FieldMonsters.transform.position).sqrMagnitude;
         return playerDistanceSqr <= stateMachine.FieldMonsters.myInfo.AtkRange * stateMachine.FieldMonsters.myInfo.AtkRange;
+    }
+
+    protected float DistanceFromPlayer()//플레이어와 몬스터 거리 측정
+    {
+        Vector3 playerPosition = stateMachine.Target.transform.position;
+        Vector3 myPosition = stateMachine.FieldMonsters.transform.position;
+
+        playerPosition.y = 0;
+        myPosition.y = 0;
+
+        float distance = (myPosition - playerPosition).sqrMagnitude;
+        return distance;
     }
 
     public void TakeDamage(float Damage)//Other의 공격력

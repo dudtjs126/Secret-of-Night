@@ -194,6 +194,7 @@ GameObject:
   - component: {fileID: 4609293026154916409}
   - component: {fileID: 5398955494323302785}
   - component: {fileID: 2686297373679185216}
+  - component: {fileID: 9099498669934903749}
   m_Layer: 9
   m_Name: Mon_01
   m_TagString: Untagged
@@ -357,6 +358,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyHp: {fileID: 4495037761414318816}
   isActive: 0
+--- !u!65 &9099498669934903749
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6023989118896663582}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 3831
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.78, y: -1.15, z: 0.37}
+  m_Center: {x: 0, y: 0.78, z: 0.88}
 --- !u!1001 &8781612592996575178
 PrefabInstance:
   m_ObjectHideFlags: 0

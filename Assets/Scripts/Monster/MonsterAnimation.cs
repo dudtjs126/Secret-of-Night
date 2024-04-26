@@ -10,6 +10,7 @@ public class MonsterAnimation : MonoBehaviour
     private static readonly int _Die = Animator.StringToHash("Die");
     private static readonly int _Walk = Animator.StringToHash("Walk");
     private static readonly int _Damage = Animator.StringToHash("Damage");
+    private static readonly int _LongAttack = Animator.StringToHash("LongAttack");
 
     private void Awake()
     {
@@ -64,6 +65,16 @@ public class MonsterAnimation : MonoBehaviour
     public void StartDamageAnimation()
     {
         animator.SetTrigger(_Damage);
+    }
+
+    public void StartLongAttackAnimation()
+    {
+        animator.SetBool(_LongAttack, true);
+    }
+
+    public void StopLongAttackAnimation()
+    {
+        animator.SetBool(_LongAttack, false);
     }
 
 }

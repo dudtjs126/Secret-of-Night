@@ -5,8 +5,6 @@ using Random = UnityEngine.Random;
 
 public class FieldMonsters : MonoBehaviour, IDamageable
 {
-
-
     [field: Header("Reference")]
     [field: SerializeField] public MonsterInfo myInfo;
     public float HP = 0;
@@ -60,10 +58,13 @@ public class FieldMonsters : MonoBehaviour, IDamageable
         stateMachine.ChangeState(stateMachine.IdleState);
 
         //원래 컬러 저장
-        originalColor = new Color[meshRenderers.Length];
-        for (int i = 0; i < meshRenderers.Length; i++)
+        if (!myInfo.ShortDistance)
         {
-            originalColor[i] = meshRenderers[i].material.color;
+            originalColor = new Color[meshRenderers.Length];
+            for (int i = 0; i < meshRenderers.Length; i++)
+            {
+                originalColor[i] = meshRenderers[i].material.color;
+            }
         }
     }
 
@@ -90,8 +91,8 @@ public class FieldMonsters : MonoBehaviour, IDamageable
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, myInfo.TargetRange);
+        //Gizmos.color = Color.red;
+        //Gizmos.DrawWireSphere(transform.position, myInfo.TargetRange);
 
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, myInfo.AtkRange);
