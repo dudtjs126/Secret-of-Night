@@ -12,7 +12,6 @@ public class SkillSlotUI : UIBase
             GameManager.Instance.playerManager.skillSlots.Add(skillSlots[i]);
             GameManager.Instance.playerManager.ActiveSkillSlot(i);
         }
-
     }
 
 }

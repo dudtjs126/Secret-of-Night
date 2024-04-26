@@ -541,8 +541,9 @@ MonoBehaviour:
     :    \uC774\uC601\uC120\n\uD018\uC2A4\uD2B8 \uAE30\uD68D : \uD5C8\uC544\uC601\n\n\nProgrammer\n\n\uAC1C\uBC1C
     \uCD1D\uAD04 :           \uBC15\uAC74\uC6D0\n\uD544\uB4DC \uBAAC\uC2A4\uD130
     :         \uD5C8\uC544\uC601\n\uBCF4\uC2A4 \uBAAC\uC2A4\uD130:          \uCC28\uB3D9\uBBFC\n\uD018\uC2A4\uD2B8:               
-    \uCC28\uB3D9\uBBFC\n\uC778\uBCA4\uD1A0\uB9AC \uBC0F \uC0C1\uC810 :   \uC774\uC11C\uD604\n\uD50C\uB808\uC774\uC5B4
-    :            \uBC15\uAC74\uC6D0\nUI :                   \uBC15\uAC74\uC6D0\n\n\n\n\nConsultant\n\uAE40\uD604\uC815
+    \uCC28\uB3D9\uBBFC\n\uC778\uBCA4\uD1A0\uB9AC \uBC0F \uC0C1\uC810 :   \uC774\uC11C\uD604\nDirector:                  
+    \uC774\uC11C\uD604\n\uD50C\uB808\uC774\uC5B4 :            \uBC15\uAC74\uC6D0\nUI
+    :                   \uBC15\uAC74\uC6D0\n\n\n\n\nConsultant\n\uAE40\uD604\uC815
     \uD29C\uD130\n\n\n\n\n\n\n\n\n\n<size=100>The End.</size>\n\uC2A4\uD30C\uB974\uD0C0
     \uCF54\uB529\uD074\uB7FD\n\n"
   m_isRightToLeft: 0

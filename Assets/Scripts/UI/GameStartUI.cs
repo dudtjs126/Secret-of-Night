@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameStartUI : UIBase
 {
     // 나중에 통합해야됨
-    private string _jsonDataPath = $"{Application.dataPath}/Datas/PlayerData_";
+    private string _jsonDataPath;
 
     private bool[] savefile;
 
@@ -23,6 +23,7 @@ public class GameStartUI : UIBase
     [SerializeField] private GameObject _optionPopup;
     public void Start()
     {
+        _jsonDataPath = $"{Application.persistentDataPath}/Datas/PlayerData_";
         Initialize();
     }
     public override void Initialize()
@@ -38,6 +39,7 @@ public class GameStartUI : UIBase
                 GameManager.Instance.playerManager.playerDatas.Add(slotNumber, new PlayerGameData());
                 GameManager.Instance.playerManager.playerDatas[slotNumber].SlotNumber = slotNumber;
                 GameManager.Instance.playerManager.playerDatas[slotNumber].Initialize();
+                Debug.Log($"데이터 존재 + {slotNumber}");
             }
         }
         // 데이터가 있는경우 이어하기 및 불러오기

@@ -28,9 +28,12 @@ public class PlayerDodgeState : PlayerBaseState
     {
         base.Update();
         AnimatorStateInfo info = stateMachine.Player.Animator.GetCurrentAnimatorStateInfo(0);
-        if (info.IsTag("Dodge") && stateMachine.Player.Animator.IsInTransition(0))
+        if (info.IsTag("Dodge"))
         {
-            stateMachine.ChangeState(stateMachine.IdleState);
+            if (info.normalizedTime > 0.8f)
+            {
+                stateMachine.ChangeState(stateMachine.IdleState);
+            }
         }
     }
     private void AddDodgeForce()

@@ -10,12 +10,14 @@ public class PlayerSkillState : PlayerBaseState
     {
         base.Enter();
         stateMachine.Player.MovementSpeedModifier = 0f;
+        StartAnimation(stateMachine.Player.AnimationData.SkillParameter);
         lockRotation = true;
     }
     public override void Exit()
     {
         base.Exit();
         stateMachine.Player.DoSkill = false;
+        StopAnimation(stateMachine.Player.AnimationData.SkillParameter);
         lockRotation = false;
     }
     public override void Update()

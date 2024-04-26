@@ -28,23 +28,33 @@ public class PlayerJumpState : PlayerBaseState
     {
         base.Update();
 
-        if (_timer <= stateMachine.Player.jumpDelayTime)
+        AnimatorStateInfo info = stateMachine.Player.Animator.GetCurrentAnimatorStateInfo(0);
+        if (info.IsTag("Jump"))
         {
-            _timer += Time.deltaTime;
-            return;
-        }
-        if (stateMachine.Player.IsGrounded && stateMachine.Player.ForceReceiver.Movement.y < 0f)
-        {
-            if (stateMachine.MovementInput == Vector2.zero)
+            if (info.normalizedTime > 0.5f && stateMachine.Player.IsGrounded)
             {
                 stateMachine.ChangeState(stateMachine.IdleState);
+                return;
             }
-            else
-            {
-                stateMachine.ChangeState(stateMachine.WalkState);
-            }
-
         }
+
+        //if (_timer <= stateMachine.Player.jumpDelayTime)
+        //{
+        //    _timer += Time.deltaTime;
+        //    return;
+        //}
+        //if (stateMachine.Player.IsGrounded && stateMachine.Player.ForceReceiver.Movement.y < 0f)
+        //{
+        //    if (stateMachine.MovementInput == Vector2.zero)
+        //    {
+        //        stateMachine.ChangeState(stateMachine.IdleState);
+        //    }
+        //    else
+        //    {
+        //        stateMachine.ChangeState(stateMachine.WalkState);
+        //    }
+
+        //}
     }
     private void AddJumpForce()
     {

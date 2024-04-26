@@ -20,7 +20,7 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI nextQuestGuideText; // 다음 퀘스트 수락 안내
 
     public List<Quest> quests; // 퀘스트 리스트
-    private int questIndex = 0; // 퀘스트 인덱스
+    public int questIndex = 0; // 퀘스트 인덱스
     public Quest currentQuest; // 현재 퀘스트    
     public Dialogue currentDialogue;
 
@@ -37,11 +37,24 @@ public class QuestManager : MonoBehaviour
         quests = questGenerator.tempQuests; // 전체 퀘스트 리스트 설정 (임시)
         quests.Sort((x, y) => x.QuestID.CompareTo(y.QuestID)); // 퀘스트 ID 순으로 정렬
 
-        questIndex = 0; // 퀘스트 인덱스 초기화
+        if (GameManager.Instance.playerManager.playerData.quest == null)
+        {
+            questIndex = 0; // 퀘스트 인덱스 초기화
+            SetCurrentQuest(); // 현재 퀘스트 설정
+            InitDialogues(); // 대화 목록 초기화
+        }
+        else
+        {
+            questIndex = GameManager.Instance.playerManager.playerData.questIndex;
+            currentQuest = GameManager.Instance.playerManager.playerData.quest;
+            DialogueHandler.I.HideDialogueUI();
+            ShowQuestDescription();
+            InitDialogue();
+        }
 
-        SetCurrentQuest(); // 현재 퀘스트 설정
 
-        InitDialogues(); // 대화 목록 초기화
+
+
     }
 
     private void Update()
@@ -71,13 +84,17 @@ public class QuestManager : MonoBehaviour
         currentQuest = quests[questIndex]; // 현재 퀘스트 설정
         if (currentQuest.QuestID == 1002)
             ShowQuestDescription();
-        
+
     }
 
     // 대화 목록 초기화
     public void InitDialogues()
     {
         dialogueHandler.InitDialogues(currentQuest.dialogues); // 대화 목록 초기화
+    }
+    public void InitDialogue()
+    {
+        dialogueHandler.InitDialogue(currentQuest.dialogues); // 대화 목록 초기화
     }
 
     // 퀘스트 설명 표시
@@ -104,12 +121,13 @@ public class QuestManager : MonoBehaviour
         }
         else
         {
-            NextQuest(); // 다음 퀘스트로
+            NextQuest(); // 다음 퀘스트로            
+            Debug.Log("퀘스트 클리어");
         }
-        if(currentQuest.isNoScript)
+        if (currentQuest.isNoScript)
         {
             ShowQuestDescription();
-        }        
+        }
 
         // 퀘스트 보상이 있으면 보상 처리
         ItemReward(
@@ -123,7 +141,7 @@ public class QuestManager : MonoBehaviour
 
         OnQuestCleared?.Invoke();
         isKillMonsterClear = false;
-        Debug.Log("퀘스트 클리어");
+
     }
 
     private void ItemReward(
@@ -182,19 +200,21 @@ public class QuestManager : MonoBehaviour
             SetCurrentQuest(); // 다음 퀘스트로 변경            
             InitDialogues(); // 대화 목록 초기화
             currentQuest.Queststatus = QuestStatus.Complete;
+            Debug.Log("NextQuset");
         }
         else
         {
             SetCurrentQuest(); // 다음 퀘스트로 변경
             HideQuestDescription(); // 퀘스트 설명 숨기기
             currentQuest.Queststatus = QuestStatus.Wait;
+            Debug.Log("NextQuset_s");
         }
 
     }
 
     // 특정 몬스터를 죽였을 때 or 특정 아이템을 획득했을 때
     public void CheckCount(int id)
-    {        
+    {
         // 첫 번째 몬스터의 ID와 개수를 확인
         if (currentQuest.QuestItemID == id)
         {
@@ -209,16 +229,16 @@ public class QuestManager : MonoBehaviour
         // 첫 번째 몬스터와 두 번째 몬스터 모두가 필요한 개수를 다 채웠는지 확인
         if (currentQuest.GoalCount <= 0 && currentQuest.GoalCount2 <= 0)
         {
-            if(currentQuest.QuestType == 1)
+            if (currentQuest.QuestType == 1)
             {
                 QuestClear(); // 퀘스트 클리어
             }
-            else if(currentQuest.QuestType == 4)
+            else if (currentQuest.QuestType == 4)
             {
                 isKillMonsterClear = true;
                 currentQuest.Queststatus = QuestStatus.Progress;
-            }          
-        }        
+            }
+        }
     }
 
 

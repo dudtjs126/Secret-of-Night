@@ -2,7 +2,7 @@ Shader "MatCap"
 {
 	Properties
 	{
-		_MainTex ("Base (RGB)", 2D) = "white" {}
+		_MainTex ("Base (RGB)", 2D) = "Red" {}
 		_BumpMap ("Normal Map", 2D) = "bump" {}
 		_MatCap ("MatCap (RGB)", 2D) = "white" {}
 		[Toggle(MATCAP_ACCURATE)] _MatCapAccurate ("Accurate Calculation", Int) = 0

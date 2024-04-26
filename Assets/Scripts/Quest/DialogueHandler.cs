@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -11,7 +10,7 @@ public class DialogueHandler : MonoBehaviour
     public delegate void HideDialogueUIEventHandler();
     public static event HideDialogueUIEventHandler OnDialogeExited;
 
-    private List<Dialogue> dialogues = new List<Dialogue>(); // 대화 리스트
+    public List<Dialogue> dialogues = new List<Dialogue>(); // 대화 리스트
     public int dialogueIndex = 0; // 대화 인덱스
 
     public static DialogueHandler I;
@@ -29,7 +28,7 @@ public class DialogueHandler : MonoBehaviour
     }
 
     // 대화 확인
-    private void CheckDialogue()
+    public void CheckDialogue()
     {
         dialogueIndex++; // 대화 인덱스 증가
 
@@ -37,7 +36,7 @@ public class DialogueHandler : MonoBehaviour
         if (dialogueIndex < dialogues.Count)
         {
             ShowDialogue(); // 대화창 표시
-        }        
+        }
         else
         {
             HideDialogueUI(); // 대화창 UI 숨기기
@@ -64,7 +63,18 @@ public class DialogueHandler : MonoBehaviour
         {
             ShowDialogue(); // 대화창 표시
             GameManager.Instance.inputManager.DisablePlayerAction();
-        }        
+        }
+    }
+    public void InitDialogue(List<Dialogue> dialogues)
+    {
+        this.dialogues = dialogues; // 대화 리스트 할당
+        dialogueIndex = 0; // 대화 인덱스 초기화
+
+        if (!QuestManager.I.currentQuest.isNoScript)
+        {
+            ShowDialogue(); // 대화창 표시
+            GameManager.Instance.inputManager.DisablePlayerAction();
+        }
     }
 
     // 대화창 표시

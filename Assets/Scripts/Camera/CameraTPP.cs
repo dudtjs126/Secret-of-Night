@@ -123,7 +123,7 @@ public class CameraTPP : MonoBehaviour
 
         //Reposition Camera
         smoothPivotOffset = Vector3.Lerp(smoothPivotOffset, targetPivotOffset, smooth * Time.deltaTime);
-        smoothCamOffset = Vector3.Lerp(smoothCamOffset, targetCamOffset, smooth * Time.deltaTime);
+        smoothCamOffset = Vector3.Lerp(smoothCamOffset, noCollisionOffset, smooth * Time.deltaTime);
 
         //smoothPivotOffset = Vector3.SmoothDamp(smoothPivotOffset, targetPivotOffset, ref pivotOffsetVelocity, smoothTime * Time.deltaTime);
         //smoothCamOffset = Vector3.SmoothDamp(smoothCamOffset, noCollisionOffset, ref camOffsetVelocity, smoothTime * Time.deltaTime);

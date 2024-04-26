@@ -4692,7 +4692,6 @@ GameObject:
   - component: {fileID: 5028793102719922042}
   - component: {fileID: 4663946292481169512}
   - component: {fileID: 8232824247260104335}
-  - component: {fileID: 2491385556268759453}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -4718,7 +4717,7 @@ Transform:
   - {fileID: 7040623446168937193}
   - {fileID: 7761943481518058002}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &6916311193706112995
 CharacterController:
@@ -4808,7 +4807,7 @@ MonoBehaviour:
   dodgeForce: -4
   <IsAttacking>k__BackingField: 0
   <IsRunning>k__BackingField: 0
-  <IsJumping>k__BackingField: 1
+  <IsJumping>k__BackingField: 0
   <IsDodgeing>k__BackingField: 0
   <DoSkill>k__BackingField: 0
   <IsGrounded>k__BackingField: 0
@@ -5008,62 +5007,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dayNightCycle: {fileID: 0}
---- !u!320 &2491385556268759453
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1536643401501160818}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: db279a3d4df34fe4fb01ff8666501f94, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: -4269530622877107477, guid: db279a3d4df34fe4fb01ff8666501f94, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: -1725051602659719003, guid: db279a3d4df34fe4fb01ff8666501f94, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: 6954618691600784693, guid: db279a3d4df34fe4fb01ff8666501f94, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: 4064534823162215762, guid: db279a3d4df34fe4fb01ff8666501f94, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: -8037249880462538948, guid: db279a3d4df34fe4fb01ff8666501f94, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: -510178282406529706, guid: db279a3d4df34fe4fb01ff8666501f94, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: -7128740277195210091, guid: db279a3d4df34fe4fb01ff8666501f94, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: 3040132904617980942, guid: db279a3d4df34fe4fb01ff8666501f94, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: -7091768356160743777, guid: db279a3d4df34fe4fb01ff8666501f94, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: 8653582145417815230, guid: db279a3d4df34fe4fb01ff8666501f94, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: 3593239520522433845, guid: db279a3d4df34fe4fb01ff8666501f94, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: -7064009847373971685, guid: db279a3d4df34fe4fb01ff8666501f94, type: 2}
-    value: {fileID: 0}
-  m_ExposedReferences:
-    m_References:
-    - 14e69c7407a8a4148bbca23014cb41d2: {fileID: 0}
-    - 2a6725bdea5b4914799840f00647e7ca: {fileID: 0}
-    - 24402c5e2c40f8f4da97e63dce089db2: {fileID: 0}
-    - fd9a944b19dc41e4ab4b88664c321c4a: {fileID: 0}
-    - 42b991fc5acdc794facdc5a16ab4a880: {fileID: 0}
-    - 80afc7fbf85603b43930ab850a17b8fb: {fileID: 0}
-    - e02b2986c9b9d3f4dab864d5ad3aee5a: {fileID: 0}
-    - 155b1a62b2e2c48438c227130e08abcc: {fileID: 0}
-    - fcc13facb8ebbd44ea73115cf0bc98ff: {fileID: 0}
-    - 1a22c0541cfa14b4b9048473d31c0eb6: {fileID: 0}
-    - 49b3cc054fd95924f8c76adba5997ec7: {fileID: 0}
-    - 1707fd71fdb728c4bb7afb383bc3a06f: {fileID: 0}
-    - 1fcc1036ff9ba43489ad9c54ec03465a: {fileID: 0}
-    - 6e3a18ee3a1a2ff41bf6d80c6da13903: {fileID: 0}
-    - 84adf95e046ed9e45aa4e07c18dc8fd8: {fileID: 0}
 --- !u!1 &1559138319227499400
 GameObject:
   m_ObjectHideFlags: 0

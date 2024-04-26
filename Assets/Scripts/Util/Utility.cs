@@ -35,8 +35,21 @@ public static class Utility
     }
     public static void SaveToJson<TSave>(TSave data, string jsonDataPath)
     {
-        string json = JsonUtility.ToJson(data);
-        File.WriteAllText(jsonDataPath, json);
+        try
+        {
+            var directory = Path.GetDirectoryName(jsonDataPath);
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+
+            string json = JsonUtility.ToJson(data);
+            File.WriteAllText(jsonDataPath, json);
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError($"Failed to save data: {ex.Message}");
+        }
     }
     public static void DeleteJson(string jsonDataPath)
     {
