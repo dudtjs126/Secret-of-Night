@@ -31,11 +31,11 @@ public class MonsterChasingState : MonsterBaseState
             stateMachine.ChangeState(stateMachine.PatrolState);
             return;
         }
-        else if (IsInAttackRange() && stateMachine.FieldMonsters.myInfo.ShortDistance)
-        {
-            stateMachine.ChangeState(stateMachine.StandoffAttackState);
-            return;
-        }
+        //else if (IsInAttackRange() && stateMachine.FieldMonsters.myInfo.ShortDistance)
+        //{
+        //    stateMachine.ChangeState(stateMachine.StandoffAttackState);
+        //    return;
+        //}
         else if (IsInAttackRange())
         {
             stateMachine.ChangeState(stateMachine.AttackState);

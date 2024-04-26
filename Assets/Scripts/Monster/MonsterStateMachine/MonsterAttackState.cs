@@ -13,8 +13,14 @@ public class MonsterAttackState : MonsterBaseState
     {
         base.Enter();
         stateMachine.MovementSpeedModifier = 0;
+
+        if (DistanceFromPlayer() >= 2f && stateMachine.FieldMonsters.myInfo.ShortDistance)
+        {
+            stateMachine.ChangeState(stateMachine.StandoffAttackState);
+            return;
+        }
         stateMachine.FieldMonsters.monsterAnimation.StartAttackAnimation();
-        Debug.Log("근거리공격");
+
         stateMachine.FieldMonsters.OnAttack += NomalAttack;
     }
 
@@ -30,6 +36,7 @@ public class MonsterAttackState : MonsterBaseState
     {
         base.Update();
         Rotate(GetMovementDirection());
+
         //선공몬스터가 아닐때
         if (stateMachine.FieldMonsters.myInfo.AtkStance == false)
         {
@@ -43,16 +50,12 @@ public class MonsterAttackState : MonsterBaseState
                 return;
             }
         }
-
-        if (DistanceFromPlayer() >= 1.6f && stateMachine.FieldMonsters.myInfo.ShortDistance)
-        {
-            stateMachine.ChangeState(stateMachine.StandoffAttackState);
-        }
     }
 
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
+        Debug.Log("근거리공격");
 
         ShortAttackCollider();
 

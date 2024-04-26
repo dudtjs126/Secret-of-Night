@@ -36,10 +36,10 @@ public class MonsterBaseState : IState, IDamageable
                 stateMachine.ChangeState(stateMachine.ChasingState);
                 return;
             }
-            else if (IsInAttackRange() && stateMachine.FieldMonsters.myInfo.ShortDistance)
-            {
-                stateMachine.ChangeState(stateMachine.StandoffAttackState);
-            }
+            //else if (IsInAttackRange() && stateMachine.FieldMonsters.myInfo.ShortDistance)
+            //{
+            //    stateMachine.ChangeState(stateMachine.StandoffAttackState);
+            //}
             else if (IsInAttackRange())
             {
                 stateMachine.ChangeState(stateMachine.AttackState);

@@ -15,7 +15,6 @@ public class MonsterStandoffAttackState : MonsterBaseState
         //[todo]원거리용 공격모션
         stateMachine.FieldMonsters.monsterAnimation.StartLongAttackAnimation();
         stateMachine.MovementSpeedModifier = 0;
-        Debug.Log("원거리공격");
     }
 
     public override void Exit()
@@ -28,12 +27,12 @@ public class MonsterStandoffAttackState : MonsterBaseState
     {
         base.Update();
         Rotate(GetMovementDirection());
-
+        Debug.Log("원거리공격");
         if (!IsInAttackRange() && IsInChaseRange())
         {
             stateMachine.ChangeState(stateMachine.ChasingState);
         }
-        if (DistanceFromPlayer() < 1.6f)
+        if (DistanceFromPlayer() < 2f)
         {
             stateMachine.ChangeState(stateMachine.AttackState);
         }
