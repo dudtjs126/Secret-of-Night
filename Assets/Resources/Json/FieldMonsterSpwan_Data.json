@@ -11,7 +11,7 @@
 			"MonsterID": [
 				2,
 				8,
-				4
+				3
 			]
 		},
 		{
@@ -205,6 +205,96 @@
 			"MonsterID": [
 				14,
 				15
+			]
+		},
+		{
+			"SpotID": 0,
+			"MonsterSpot": [
+				0
+			],
+			"Radius": 0,
+			"MonsterID": [
+				0
+			]
+		},
+		{
+			"SpotID": 0,
+			"MonsterSpot": [
+				0
+			],
+			"Radius": 0,
+			"MonsterID": [
+				0
+			]
+		},
+		{
+			"SpotID": 0,
+			"MonsterSpot": [
+				0
+			],
+			"Radius": 0,
+			"MonsterID": [
+				0
+			]
+		},
+		{
+			"SpotID": 0,
+			"MonsterSpot": [
+				0
+			],
+			"Radius": 0,
+			"MonsterID": [
+				0
+			]
+		},
+		{
+			"SpotID": 0,
+			"MonsterSpot": [
+				0
+			],
+			"Radius": 0,
+			"MonsterID": [
+				0
+			]
+		},
+		{
+			"SpotID": 0,
+			"MonsterSpot": [
+				0
+			],
+			"Radius": 0,
+			"MonsterID": [
+				0
+			]
+		},
+		{
+			"SpotID": 0,
+			"MonsterSpot": [
+				0
+			],
+			"Radius": 0,
+			"MonsterID": [
+				0
+			]
+		},
+		{
+			"SpotID": 0,
+			"MonsterSpot": [
+				0
+			],
+			"Radius": 0,
+			"MonsterID": [
+				0
+			]
+		},
+		{
+			"SpotID": 0,
+			"MonsterSpot": [
+				0
+			],
+			"Radius": 0,
+			"MonsterID": [
+				0
 			]
 		}
 	]

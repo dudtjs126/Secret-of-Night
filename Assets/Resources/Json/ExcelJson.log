@@ -1,8 +1,8 @@
 
-Loading: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\BossMonster_Data.xlsx
+Loading: D:\Work\Github\Project_P\excel2json-master\BossMonster_Data.xlsx
 Parse sheet: Sheet1
-Parsing: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\BossMonster_Data.xlsx.$$$\Sheet1.csv
-Closing: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\BossMonster_Data.xlsx
+Parsing: D:\Work\Github\Project_P\excel2json-master\BossMonster_Data.xlsx.$$$\Sheet1.csv
+Closing: D:\Work\Github\Project_P\excel2json-master\BossMonster_Data.xlsx
 ------------------------------------------------------------------------------
 [BossMonster_Data.xlsx(Sheet1): ROW 1]
 Found object mark: '#BossMonster[{}]'
@@ -22,10 +22,10 @@ Found object mark: '#BossMonster[{}]'
  Key: Range at 7
 Parsing Array Object Table...
 
-Loading: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\FieldMonsterSpwan_Data.xlsx
+Loading: D:\Work\Github\Project_P\excel2json-master\FieldMonsterSpwan_Data.xlsx
 Parse sheet: Sheet1
-Parsing: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\FieldMonsterSpwan_Data.xlsx.$$$\Sheet1.csv
-Closing: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\FieldMonsterSpwan_Data.xlsx
+Parsing: D:\Work\Github\Project_P\excel2json-master\FieldMonsterSpwan_Data.xlsx.$$$\Sheet1.csv
+Closing: D:\Work\Github\Project_P\excel2json-master\FieldMonsterSpwan_Data.xlsx
 ------------------------------------------------------------------------------
 [FieldMonsterSpwan_Data.xlsx(Sheet1): ROW 1]
 Found object mark: '#FieldMonsterSpwan[{}]'
@@ -39,10 +39,10 @@ Found object mark: '#FieldMonsterSpwan[{}]'
  Key: MonsterID[] at 4
 Parsing Array Object Table...
 
-Loading: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\FieldMonster_Data.xlsx
+Loading: D:\Work\Github\Project_P\excel2json-master\FieldMonster_Data.xlsx
 Parse sheet: Sheet1
-Parsing: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\FieldMonster_Data.xlsx.$$$\Sheet1.csv
-Closing: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\FieldMonster_Data.xlsx
+Parsing: D:\Work\Github\Project_P\excel2json-master\FieldMonster_Data.xlsx.$$$\Sheet1.csv
+Closing: D:\Work\Github\Project_P\excel2json-master\FieldMonster_Data.xlsx
 ------------------------------------------------------------------------------
 [FieldMonster_Data.xlsx(Sheet1): ROW 1]
 Found object mark: '#FieldMonster[{}]'
@@ -88,10 +88,10 @@ Found object mark: '#FieldMonster[{}]'
  Key: Weigth[] at 20
 Parsing Array Object Table...
 
-Loading: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\Items_Data.xlsx
+Loading: D:\Work\Github\Project_P\excel2json-master\Items_Data.xlsx
 Parse sheet: Sheet1
-Parsing: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\Items_Data.xlsx.$$$\Sheet1.csv
-Closing: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\Items_Data.xlsx
+Parsing: D:\Work\Github\Project_P\excel2json-master\Items_Data.xlsx.$$$\Sheet1.csv
+Closing: D:\Work\Github\Project_P\excel2json-master\Items_Data.xlsx
 ------------------------------------------------------------------------------
 [Items_Data.xlsx(Sheet1): ROW 1]
 Found object mark: '#items[{}]'
@@ -123,10 +123,10 @@ Found object mark: '#items[{}]'
  Key: UnlockLevel at 13
 Parsing Array Object Table...
 
-Loading: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\PlayerLevel_Data.xlsx
+Loading: D:\Work\Github\Project_P\excel2json-master\PlayerLevel_Data.xlsx
 Parse sheet: Sheet1
-Parsing: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\PlayerLevel_Data.xlsx.$$$\Sheet1.csv
-Closing: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\PlayerLevel_Data.xlsx
+Parsing: D:\Work\Github\Project_P\excel2json-master\PlayerLevel_Data.xlsx.$$$\Sheet1.csv
+Closing: D:\Work\Github\Project_P\excel2json-master\PlayerLevel_Data.xlsx
 ------------------------------------------------------------------------------
 [PlayerLevel_Data.xlsx(Sheet1): ROW 1]
 Found object mark: '#PlayerLevel[{}]'
@@ -142,10 +142,10 @@ Found object mark: '#PlayerLevel[{}]'
  Key: Def at 5
 Parsing Array Object Table...
 
-Loading: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\PlayerSkill_Data.xlsx
+Loading: D:\Work\Github\Project_P\excel2json-master\PlayerSkill_Data.xlsx
 Parse sheet: Sheet1
-Parsing: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\PlayerSkill_Data.xlsx.$$$\Sheet1.csv
-Closing: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\PlayerSkill_Data.xlsx
+Parsing: D:\Work\Github\Project_P\excel2json-master\PlayerSkill_Data.xlsx.$$$\Sheet1.csv
+Closing: D:\Work\Github\Project_P\excel2json-master\PlayerSkill_Data.xlsx
 ------------------------------------------------------------------------------
 [PlayerSkill_Data.xlsx(Sheet1): ROW 1]
 Found object mark: '#PlayerSkill[{}]'
@@ -171,10 +171,10 @@ Found object mark: '#PlayerSkill[{}]'
  Key: AttackAngle at 10
 Parsing Array Object Table...
 
-Loading: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\PlayerStat_Data.xlsx
+Loading: D:\Work\Github\Project_P\excel2json-master\PlayerStat_Data.xlsx
 Parse sheet: Sheet1
-Parsing: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\PlayerStat_Data.xlsx.$$$\Sheet1.csv
-Closing: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\PlayerStat_Data.xlsx
+Parsing: D:\Work\Github\Project_P\excel2json-master\PlayerStat_Data.xlsx.$$$\Sheet1.csv
+Closing: D:\Work\Github\Project_P\excel2json-master\PlayerStat_Data.xlsx
 ------------------------------------------------------------------------------
 [PlayerStat_Data.xlsx(Sheet1): ROW 1]
 Found object mark: '#PlayerStat[{}]'
@@ -206,10 +206,10 @@ Found object mark: '#PlayerStat[{}]'
  Key: PrefabPath at 13
 Parsing Array Object Table...
 
-Loading: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\QuestScript_Data.xlsx
+Loading: D:\Work\Github\Project_P\excel2json-master\QuestScript_Data.xlsx
 Parse sheet: Sheet1
-Parsing: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\QuestScript_Data.xlsx.$$$\Sheet1.csv
-Closing: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\QuestScript_Data.xlsx
+Parsing: D:\Work\Github\Project_P\excel2json-master\QuestScript_Data.xlsx.$$$\Sheet1.csv
+Closing: D:\Work\Github\Project_P\excel2json-master\QuestScript_Data.xlsx
 ------------------------------------------------------------------------------
 [QuestScript_Data.xlsx(Sheet1): ROW 1]
 Found object mark: '#QuestScript[{}]'
@@ -223,10 +223,10 @@ Found object mark: '#QuestScript[{}]'
  Key: Scripts at 4
 Parsing Array Object Table...
 
-Loading: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\Quest_Data.xlsx
+Loading: D:\Work\Github\Project_P\excel2json-master\Quest_Data.xlsx
 Parse sheet: Sheet1
-Parsing: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\Quest_Data.xlsx.$$$\Sheet1.csv
-Closing: C:\Users\이영선\Desktop\Sparta_Club\Project_P\Project_P\excel2json-master\Quest_Data.xlsx
+Parsing: D:\Work\Github\Project_P\excel2json-master\Quest_Data.xlsx.$$$\Sheet1.csv
+Closing: D:\Work\Github\Project_P\excel2json-master\Quest_Data.xlsx
 ------------------------------------------------------------------------------
 [Quest_Data.xlsx(Sheet1): ROW 1]
 Found object mark: '#Quest[{}]'
