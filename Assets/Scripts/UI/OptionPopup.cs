@@ -67,6 +67,7 @@ public class OptionPopup : UIBase
     #region resolution
     public override void Initialize()
     {
+        _audioMixer = GameManager.Instance.soundManager.mixer;
         //mouse init
         _mouseSensitive.value = CameraTPP.mouseSmoothSpeed - 0.5f;
 

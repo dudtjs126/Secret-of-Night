@@ -12,6 +12,7 @@ public class BossScene : BaseScene
         base.Initizlize();
         SceneType = Scene.Boss;
 
+        GameManager.Instance.soundManager.PlayBGM(GameManager.Instance.soundManager.GetSoundClip(SoundList.bossBGM));
         Invoke("SpawnBoss", 0.1f);
     }
 

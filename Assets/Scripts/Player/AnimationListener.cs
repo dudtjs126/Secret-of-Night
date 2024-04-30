@@ -52,6 +52,11 @@ public class AnimationListener : MonoBehaviour
         go.Play();
         StartCoroutine(DeacitveEffect(go, name));
     }
+    public void PlaySound(string name)
+    {
+        SoundList sound = (SoundList)System.Enum.Parse(typeof(SoundList), name);
+        GameManager.Instance.soundManager.PlayEffectSound(GameManager.Instance.soundManager.GetSoundClip(sound), transform.position, 1.0f);
+    }
     IEnumerator DeacitveEffect(ParticleSystem go, string name, float delaytime = 2.0f)
     {
         yield return new WaitForSeconds(2.0f);

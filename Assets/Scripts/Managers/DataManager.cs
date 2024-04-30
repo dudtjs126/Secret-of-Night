@@ -12,7 +12,7 @@ public class DataManager : MonoBehaviour
     public QuestDataBase questDataBase;
     public DialogueDataBase dialogueDataBase;
     public MonsterSpawnDatabase monsterSpawnDatabase;
-
+    public SoundData soundData = null;
     #endregion
 
     public void Initialize()
@@ -38,6 +38,9 @@ public class DataManager : MonoBehaviour
 
         monsterSpawnDatabase = Utility.LoadJson<MonsterSpawnDatabase>("FieldMonsterSpwan_Data");
         monsterSpawnDatabase.Initalize();
+
+        soundData = ScriptableObject.CreateInstance<SoundData>();
+        soundData.LoadData();
     }
 }
 

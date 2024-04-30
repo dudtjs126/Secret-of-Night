@@ -2,17 +2,17 @@ using UnityEngine;
 
 public class SoundChanger : MonoBehaviour
 {
-    [SerializeField] private AudioClip _enterBgm;
-    [SerializeField] private AudioClip _exitBgm;
+    public SoundList _enterBgm;
+    public SoundList _exitBgm;
 
     private void OnTriggerEnter(Collider other)
     {
-        GameManager.Instance.soundManager.PlayBGM(_enterBgm);
+        GameManager.Instance.soundManager.PlayBGM(GameManager.Instance.soundManager.GetSoundClip(_enterBgm));
 
     }
     private void OnTriggerExit(Collider other)
     {
-        GameManager.Instance.soundManager.PlayBGM(_exitBgm);
+        GameManager.Instance.soundManager.PlayBGM(GameManager.Instance.soundManager.GetSoundClip(_exitBgm));
     }
 
 }

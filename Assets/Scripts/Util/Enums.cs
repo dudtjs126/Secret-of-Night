@@ -35,3 +35,10 @@ public enum Scene
     None,
 
 }
+public enum SoundPlayType
+{
+    None = -1,
+    BGM,
+    EFFECT,
+    UI,
+}
