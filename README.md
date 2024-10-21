@@ -1,3 +1,5 @@
+시연영상 : https://www.youtube.com/watch?v=qop2KnrpkrA
+
 tips
 데이터 저장은 loading창에서 또는 직접 저장으로 저장 됩니다
 
